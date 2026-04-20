@@ -1,0 +1,183 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #1a1814;
+  --ink-secondary: #4a4741;
+  --ink-tertiary: #8a8680;
+  --paper: #f7f4ef;
+  --paper-secondary: #f0ece5;
+  --paper-tertiary: #e8e3db;
+  --border: #d8d3cb;
+  --border-light: #e8e3db;
+  --amber: #c17d11;
+  --amber-bg: #fef3dc;
+  --amber-border: #f0c060;
+  --success: #2e7d52;
+  --success-bg: #ecf7f2;
+  --success-border: #9dd4b8;
+  --warning: #9a5c1a;
+  --warning-bg: #fef3dc;
+  --warning-border: #f0c060;
+  --danger: #b83c3c;
+  --danger-bg: #fdf0f0;
+  --danger-border: #f0a0a0;
+  --info: #2b5fa8;
+  --info-bg: #eef4fd;
+  --info-border: #a0c0ef;
+  --font-display: "DM Serif Display", Georgia, serif;
+  --font-body: "Instrument Sans", system-ui, sans-serif;
+  --font-mono: "DM Mono", monospace;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 2px;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+
+/* Apply this to the element you want to hide the scrollbar for */
+.hide-scrollbar {
+  /* Hide scrollbar for Firefox */
+  scrollbar-width: none;
+
+  /* Hide scrollbar for IE and legacy Edge */
+  -ms-overflow-style: none;
+}
+
+/* Hide scrollbar for Chrome, Safari, and Opera */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes shimmer {
+  0% {
+    background-position: -400px 0;
+  }
+  100% {
+    background-position: 400px 0;
+  }
+}
+@keyframes dotBounce {
+  0%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-5px);
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes widthGrow {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease both;
+}
+.animate-fade-in-up {
+  animation: fadeInUp 0.5s ease both;
+}
+.stagger-1 {
+  animation-delay: 0.05s;
+}
+.stagger-2 {
+  animation-delay: 0.1s;
+}
+.stagger-3 {
+  animation-delay: 0.15s;
+}
+.stagger-4 {
+  animation-delay: 0.2s;
+}
+.stagger-5 {
+  animation-delay: 0.25s;
+}
+.stagger-6 {
+  animation-delay: 0.3s;
+}
+
+.shimmer-skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--paper-secondary) 25%,
+    var(--paper-tertiary) 50%,
+    var(--paper-secondary) 75%
+  );
+  background-size: 400px 100%;
+  animation: shimmer 1.4s ease infinite;
+}
