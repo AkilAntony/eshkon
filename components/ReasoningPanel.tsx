@@ -1,11 +1,12 @@
 'use client';
 
+import { AIResponse } from '@/types/common';
 import { useState } from 'react';
-import type { InsightResponse } from '@/types';
+ 
 
 interface ReasoningPanelProps {
-  reasoning: InsightResponse['reasoning'];
-  sources: InsightResponse['sources'];
+  reasoning: AIResponse['reasoning'];
+  sources: AIResponse['sources'];
 }
 
 const SOURCE_ICONS: Record<string, string> = {
