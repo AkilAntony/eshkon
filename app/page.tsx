@@ -108,8 +108,10 @@ export default function Home() {
                   lineHeight: 1.6,
                 }}
               >
-                Ask a question about your supply chain. Insight analyses your
-                data, surfaces confidence signals, and guides your next steps.
+                Ask a question about your store. Insight analyses cart
+                behaviour, inventory risk, customer churn, and fulfilment
+                performance — then surfaces confidence signals and guides your
+                next step.
               </p>
               <QueryInput
                 onSubmit={handleQuery}
